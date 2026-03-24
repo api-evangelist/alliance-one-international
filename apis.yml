@@ -1,0 +1,7 @@
+aid: alliance-one-international
+url: https://raw.githubusercontent.com/api-evangelist/alliance-one-international/refs/heads/main/apis.yml
+modified: '2026-03-23'
+apis: []
+common:
+  - type: Website
+    url: https://www.alliance-one-international.com
