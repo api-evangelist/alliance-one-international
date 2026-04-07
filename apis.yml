@@ -1,7 +1,12 @@
 aid: alliance-one-international
-url: https://raw.githubusercontent.com/api-evangelist/alliance-one-international/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/alliance-one-international/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.alliance-one-international.com
+description: >-
+  Alliance One International is a global leaf tobacco merchant that purchases, processes,
+  and sells leaf tobacco to manufacturers of cigarettes and other consumer tobacco
+  products.
