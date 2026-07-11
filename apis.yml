@@ -16,6 +16,8 @@ description: >-
   did not maintain a public developer API program.
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/alliance-one-international-domain-security.yml
   - type: Website
     url: https://www.pyxusinternational.com
 tags:
