@@ -26,7 +26,14 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/alliance-one-international.png
 url: >-
   https://raw.githubusercontent.com/api-evangelist/alliance-one-international/refs/heads/main/apis.yml
-modified: '2026-04-19'
+created: '2026-04-19'
+modified: '2026-09-01'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+  - FN: APIs.json
+    email: info@apis.io
+
 description: >-
   Alliance One International was a global leaf tobacco merchant that purchased,
   processed, and sold leaf tobacco to manufacturers of cigarettes and other
@@ -38,16 +45,52 @@ description: >-
   International changed its name to Pyxus International, reflecting a broader
   diversification strategy beyond tobacco into hemp, cannabis, and e-liquids.
   As an agricultural commodity trading business, Alliance One International
-  did not maintain a public developer API program.
+  did not maintain a public developer API program, and probes on 2026-09-01 found
+  none at its successor either: pyxusinternational.com is now a parked domain and
+  the live corporate site at www.pyxus.com publishes no API, SDK, webhook surface,
+  or machine-readable specification.
 apis: []
 common:
   - type: DomainSecurity
     url: security/alliance-one-international-domain-security.yml
   - type: Website
-    url: https://www.pyxusinternational.com
+    url: https://www.pyxus.com
+  - type: PrivacyPolicy
+    url: https://www.pyxus.com/privacy-policy.php
+  - type: TermsOfService
+    url: https://www.pyxus.com/pyxus-alliance-terms.php
+  - type: Support
+    url: https://www.pyxus.com/contact.php
+  - type: LLMsTxt
+    url: llms/alliance-one-international-llms.txt
 tags:
   - Tobacco
   - Agriculture
   - Commodities
   - Leaf Tobacco
   - Manufacturing
+x-enrichment:
+  date: '2026-09-01'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    The Alliance One International brand was retired in 2018 when the company renamed
+    itself Pyxus International, and the domain of record for it, pyxusinternational.com,
+    is now a parked domain that answers every path — including a negative-control path
+    that cannot exist — with a 114-byte JavaScript lander; the successor's live site at
+    www.pyxus.com is a corporate brochure for an agricultural commodity business with no
+    developer section, no API, and clean 404s on every named /.well-known/ path.
+  evidence:
+    - url: https://www.pyxusinternational.com/.well-known/alliance-one-international-negative-control-7f3ab91c.json
+      status: 200
+    - url: https://www.pyxus.com/developers
+      status: 404
+    - url: https://www.pyxus.com/openapi.json
+      status: 404
+    - url: https://www.pyxus.com/.well-known/api-catalog
+      status: 404
+  checked: '2026-09-01'

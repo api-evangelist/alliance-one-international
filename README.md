@@ -70,6 +70,15 @@ Founded in 2005 through the merger of Dimon Incorporated and Standard Commercial
 
 In 2018, Alliance One International changed its name to Pyxus International, reflecting a broader diversification strategy beyond tobacco into hemp, cannabis, and e-liquids.
 
+As of a probe on 2026-09-01 the domain previously recorded for this company,
+`pyxusinternational.com`, is a parked domain that answers every path with a JavaScript
+lander. The successor company's live corporate site is <https://www.pyxus.com>. No
+developer program, machine-readable API contract, or `/.well-known/` discovery document
+was found on any host the company controls.
+
 ## Links
 
-- [Pyxus International (formerly Alliance One)](https://www.pyxusinternational.com)
+- [Pyxus International (formerly Alliance One)](https://www.pyxus.com)
+- [About Pyxus](https://www.pyxus.com/about.php)
+- [Contact](https://www.pyxus.com/contact.php)
+- [Privacy Policy](https://www.pyxus.com/privacy-policy.php)

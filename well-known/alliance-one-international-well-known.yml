@@ -1,0 +1,70 @@
+generated: '2026-09-01'
+method: probed
+source: live GET of the named /.well-known/ path list against the successor company's hosts
+note: >-
+  Alliance One International no longer operates under that name — it became Pyxus
+  International, Inc. in 2018. The domain recorded on this profile,
+  pyxusinternational.com, is now a PARKED DOMAIN: it answers HTTP 200 with a
+  114-byte JavaScript lander ('window.location.href="/lander"') for every path,
+  including a negative-control path that cannot exist, so nothing served there
+  can be counted. The company's live site is www.pyxus.com, which returns clean
+  404s for every named /.well-known/ path and for the negative control. NO
+  WellKnown or SecurityTxt pointer is emitted — every probe missed.
+hit_count: 0
+hosts:
+  - host: https://www.pyxus.com
+    path_echo_control: passed
+    soft_404_control:
+      path: /.well-known/alliance-one-international-negative-control-7f3ab91c.json
+      status: 404
+      bytes: 555
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog.json
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/ucp.json
+        status: 404
+        file: null
+      - path: /.well-known/acp.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: https://www.pyxusinternational.com
+    path_echo_control: failed
+    soft_404_control:
+      path: /.well-known/alliance-one-international-negative-control-7f3ab91c.json
+      status: 200
+      bytes: 114
+      body: '<!DOCTYPE html><html><head><script>window.onload=function(){window.location.href="/lander"}</script></head></html>'
+    note: >-
+      Catch-all parking lander. Every path returns the same 114-byte HTML,
+      so every 200 on this host is discarded and no document is recorded.
+      /llms.txt on this host returns a 65-byte robots.txt-shaped body from the
+      parking provider, not an llms.txt — also discarded.
+    documents: []
